@@ -1,6 +1,6 @@
 # ARM Templates for Function App Deployment
 
-This repo contains currently available Azure Resource Manager templates for deploying Function App with recommended settings and best practices.
+This repo contains currently available <a href="https://github.com/patelchandni/arm-template-functions-deployment/tree/main/templates">Azure Resource Manager templates</a> for deploying Function App with recommended settings and best practices.
 
 This repo also contains documentation on the following:
 
