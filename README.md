@@ -1,1 +1,1 @@
-# ARM Template for Function App Deployment
+# ARM Templates for Function App Deployment
