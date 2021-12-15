@@ -4,6 +4,6 @@ This repo contains currently available Azure Resource Manager templates for depl
 
 This repo also contains documentation on the following:
 
-1. <a href="">Frequently Asked Questions (FAQ)</a>
+1. <a href="https://github.com/patelchandni/arm-template-functions-deployment/blob/main/documentation/FAQs.md">Frequently Asked Questions (FAQ)</a>
 2. <a href="">Best Practices</a>
 3. <a href="">Known Issues</a>
