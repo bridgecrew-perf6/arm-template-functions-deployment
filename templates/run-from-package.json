@@ -30,7 +30,7 @@
         {
           "name": "[parameters('siteName')]",
           "type": "Microsoft.Web/sites",
-          "apiVersion": "2016-03-01",
+          "apiVersion": "2019-08-01",
           "location": "[parameters('location')]",
           "properties": {
             "siteConfig": {
@@ -46,7 +46,7 @@
             {
               "name": "ZipDeploy",
               "type": "Extensions",
-              "apiVersion": "2016-03-01",
+              "apiVersion": "2019-08-01",
               "dependsOn": [
                 "[concat('Microsoft.Web/sites/', parameters('siteName'))]"
               ],
