@@ -4,7 +4,7 @@
 
 ZipDeploy is intended for xcopy or ftp style deployment. By default, It unzips the artifacts and lay them out exactly to d:\home\site\wwwroot. You can use any tooling (such as one coming with Windows) to zip your content.
 
-It is recommended to set appSettings WEBSITE_RUN_FROM_PACKAGE=1, to allow Zip package deployed with ZipDeploy to mount as read-only virtual filesystem directly without deflating or extracting. The advantage is to allow atomic and reliable deployment (no more files being locked). 
+It is recommended to set appSettings `WEBSITE_RUN_FROM_PACKAGE=1`, to allow Zip package deployed with ZipDeploy to mount as read-only virtual filesystem directly without deflating or extracting. The advantage is to allow atomic and reliable deployment (no more files being locked). 
 
 The following example shows declartion of ZipDeploy extension in site resources along with the recommended WEBSITE_RUN_FROM_PACKAGE appSetting, and for the full deployment template, see <a href="https://github.com/patelchandni/arm-template-functions-deployment/blob/main/templates/run-from-package.json">Zip Deploy with Run From Package template</a>:
 
@@ -12,7 +12,7 @@ The following example shows declartion of ZipDeploy extension in site resources 
 {
   "name": "[parameters('siteName')]",
   "type": "Microsoft.Web/sites",
-  "apiVersion": "2016-03-01",
+  "apiVersion": "2019-08-01",
   "location": "[parameters('location')]",
   "properties": {
     "siteConfig": {
@@ -28,7 +28,7 @@ The following example shows declartion of ZipDeploy extension in site resources 
     {
       "name": "ZipDeploy",
       "type": "Extensions",
-      "apiVersion": "2016-03-01",
+      "apiVersion": "2019-08-01",
       "dependsOn": [
         "[concat('Microsoft.Web/sites/', parameters('siteName'))]"
       ],
