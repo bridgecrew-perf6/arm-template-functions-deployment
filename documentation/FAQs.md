@@ -10,3 +10,7 @@ Q : What type of value is required for dependsOn?
 A : Its value is a JavaScript Object Notation (JSON) array of strings, each of which is a resource name or ID. A full `resourceId` can also be used for the dependency but is only necessary when two or more resources share the same name (which should be avoided).
 <br /><br />
 
+Q : Can we use the appSetting `WEBSITE_RUN_FROM_PACKAGE=1` with MSDeploy?
+
+A : No. The appSetting `WEBSITE_RUN_FROM_PACKAGE=1` is only available with ZipDeploy. This is the recommended path of deployment.
+<br /><br />
