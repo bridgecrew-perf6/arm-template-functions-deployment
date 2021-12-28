@@ -23,10 +23,6 @@
         "description": "The name of the Azure Function app."
       }
     },
-    "packageUri": {
-      "type": "string",
-      "value": "your zip content url"
-    },
     "functionAppPlanName": {
       "type": "string",
       "defaultValue": "[format('plan-{0}', uniqueString(resourceGroup().id))]",
@@ -544,19 +540,6 @@
         "[resourceId('Microsoft.Network/privateEndpoints/privateDnsZoneGroups', variables('privateEndpointStorageQueueName'), 'tablePrivateDnsZoneGroup')]",
         "[resourceId('Microsoft.Network/privateDnsZones/virtualNetworkLinks', variables('privateStorageTableDnsZoneName'), format('{0}-link', variables('privateStorageTableDnsZoneName')))]",
         "[resourceId('Microsoft.Network/privateEndpoints/privateDnsZoneGroups', variables('privateEndpointStorageTableName'), 'tablePrivateDnsZoneGroup')]"
-      ],
-      "resources": [
-        {
-          "name": "ZipDeploy",
-          "type": "Extensions",
-          "apiVersion": "2019-08-01",
-          "dependsOn": [
-            "[concat('Microsoft.Web/sites/', parameters('functionAppName'))]"
-          ],
-          "properties": {
-            "packageUri": "[parameters('packageUri')]"
-          }
-        }
       ]
     },
     {
