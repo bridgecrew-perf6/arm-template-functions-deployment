@@ -8,8 +8,8 @@ This repo contains currently available Azure Resource Manager templates for depl
 
 This repo also contains documentation on the following:
 
-1. <a href="/documentation/FAQs.md">Frequently Asked Questions (FAQs)</a>
-2. <a href="/documentation/best-practices.md">Best Practices Guide</a>
+1. <a href="/wiki/Frequently-Asked-Questions-(FAQs)">Frequently Asked Questions (FAQs)</a>
+2. <a href="/wiki/Best-Practices-Guide">Best Practices Guide</a>
 3. <a href="">Common Issues</a>
 
 For more information on how to deploy Azure Function App using ARM template, please refer: <a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-infrastructure-as-code">Automate resource deployment for your function app in Azure Functions</a>
