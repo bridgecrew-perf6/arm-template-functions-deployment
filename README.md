@@ -10,7 +10,7 @@ This repo also contains documentation on the following:
 
 1. <a href="https://github.com/patelchandni/arm-template-functions-deployment/wiki/Frequently-Asked-Questions-(FAQs)">Frequently Asked Questions (FAQs)</a>
 2. <a href="https://github.com/patelchandni/arm-template-functions-deployment/wiki/Best-Practices-Guide">Best Practices Guide</a>
-3. <a href="">Common Issues</a>
+3. <a href="https://github.com/patelchandni/arm-template-functions-deployment/wiki/Common-Issues-with-Solutions">Common Issues with Solutions</a>
 
 For more information on how to deploy Azure Function App using ARM template, please refer: <a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-infrastructure-as-code">Automate resource deployment for your function app in Azure Functions</a>
 
