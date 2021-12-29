@@ -25,7 +25,7 @@ ZipDeploy is intended for xcopy or ftp style deployment. By default, It unzips t
 
 It is recommended to set appSettings `WEBSITE_RUN_FROM_PACKAGE=1`, to allow Zip package deployed with ZipDeploy to mount as read-only virtual filesystem directly without deflating or extracting. The advantage is to allow atomic and reliable deployment (no more files being locked). 
 
-The following example shows declartion of ZipDeploy extension in site resources along with the recommended WEBSITE_RUN_FROM_PACKAGE appSetting, and for the full deployment template, see <a href="https://github.com/patelchandni/arm-template-functions-deployment/blob/main/templates/run-from-package.json">Function App Deployment with ZipDeploy Run From Package</a> template:
+The following example shows declartion of ZipDeploy extension in site resources along with the recommended WEBSITE_RUN_FROM_PACKAGE appSetting, and for the full deployment template, see <a href="/zip-deploy-run-from-package/azuredeploy.json">Function App Deployment with ZipDeploy Run From Package</a> template:
 
 ```json
 {
