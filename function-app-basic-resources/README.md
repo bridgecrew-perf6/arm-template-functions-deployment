@@ -12,7 +12,7 @@ The Function App uses the AzureWebJobsStorage and WEBSITE_CONTENTAZUREFILECONNEC
 
 ### ZipDeploy Extension
 
-The Zip Deploy extension is added along with app setting `WEBSITE_RUN_FROM_PACKAGE=1` to use the zip package for deployment. 
+The Zip Deploy extension is added along with app setting `WEBSITE_RUN_FROM_PACKAGE=1` to mount the zip package for deployment. 
 
 ### Comsumption Plan
 
