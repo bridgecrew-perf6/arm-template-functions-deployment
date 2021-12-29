@@ -50,6 +50,7 @@
         "[concat('hidden-link:', resourceGroup().id, '/providers/Microsoft.Web/sites/', variables('functionAppName'))]": "Resource"
       },
       "properties": {
+        "Application_Type": "web",
         "applicationId": "[variables('functionAppName')]"
       }
     },
