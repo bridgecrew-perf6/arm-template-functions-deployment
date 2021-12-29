@@ -9,7 +9,7 @@ The value of a dependency is simply the name of a resource. A full `resourceId` 
 
 Conditional resources are automatically removed from the dependency graph when not deployed. Authoring these dependencies can be done as if the resource will always be deployed.  
 
-The following example shows declartion of dependsOn element, and for the full deployment template, see <a href="https://github.com/patelchandni/arm-template-functions-deployment/blob/master/function-app-basic-resources/azuredeploy.json">Function App with Basic Resources</a> template:
+The following example shows declartion of dependsOn element, and for the full deployment template, see <a href="/function-app-basic-resources/azuredeploy.json">Function App with Basic Resources</a> template:
 
 ```json
 "dependsOn": [
