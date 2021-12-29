@@ -4,7 +4,7 @@
   "parameters": {
     "appNamePrefix": {
       "type": "string",
-      "value": "The name of the function app that you wish to create."
+      "value": "functionapp-"
     },
     "packageUri": {
       "value": "your zip content url"
