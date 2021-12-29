@@ -4,7 +4,7 @@
 
 This sample Azure Resource Manager template deploys an Azure Function App that communicates with the Azure Storage account referenced by the [AzureWebJobsStorage](https://docs.microsoft.com/azure/azure-functions/functions-app-settings#azurewebjobsstorage) and [WEBSITE_CONTENTAZUREFILECONNECTIONSTRING](https://docs.microsoft.com/azure/azure-functions/functions-app-settings#website_contentazurefileconnectionstring) app settings.
 
-![Function App with Basic Resources](/function-app-basic-resources/function-app-basic-resources.jpg) 
+![Function App with Basic Resources](/function-app-basic-resources/images/function-app-basic-resources.jpg) 
 
 ### Azure Function App
 
