@@ -24,6 +24,9 @@
       "name": "[parameters('siteName')]",
       "type": "Microsoft.Web/sites",
       "apiVersion": "2019-08-01",
+      "properties": {
+        "mode": "Incremental",
+      },
       "location": "[parameters('location')]",
       "resources": [
         {
