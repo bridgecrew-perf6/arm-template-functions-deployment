@@ -17,7 +17,9 @@
     },
     "packageUri": {
       "type": "string",
-      "value": "your zip content url"
+      "metadata": {
+        "description": "your zip content url"
+      }
     }
   },
   "variables": {
