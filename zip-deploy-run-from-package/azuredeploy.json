@@ -24,10 +24,39 @@
       "name": "[parameters('siteName')]",
       "type": "Microsoft.Web/sites",
       "apiVersion": "2019-08-01",
+      "location": "[parameters('location')]",
       "properties": {
         "mode": "Incremental",
+        "siteConfig": {
+          "appSettings": [
+            {
+              "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
+              "value": "1289482e-f6b0-4b09-b73f-04f037124c96"
+            },
+            {
+              "name": "APPLICATIONINSIGHTS_CONNECTION_STRING",
+              "value": "InstrumentationKey=1289482e-f6b0-4b09-b73f-04f037124c96;IngestionEndpoint=https://centralus-2.in.applicationinsights.azure.com/"
+            },
+            {
+              "name": "AzureWebJobsStorage",
+              "value": "DefaultEndpointsProtocol=https;AccountName=storageaccountcpwina348;AccountKey=eV5QquhBXX1sNy8vhMHcx6YabpWjH27HHM3ex3XDPteF9k3E3JzCohqjCTYcGMSxHaGR5geX1JksglhE4ozLJA==;EndpointSuffix=core.windows.net"
+            },
+            {
+              "name": "FUNCTIONS_EXTENSION_VERSION",
+              "value": "~4"
+            },
+            {
+              "name": "FUNCTIONS_WORKER_RUNTIME",
+              "value": "dotnet"
+            }
+            {
+              "name": "WEBSITE_RUN_FROM_PACKAGE",
+              "value": "1"
+            },
+          ],
+          "clientAffinityEnabled": false
+        }
       },
-      "location": "[parameters('location')]",
       "resources": [
         {
           "name": "ZipDeploy",
