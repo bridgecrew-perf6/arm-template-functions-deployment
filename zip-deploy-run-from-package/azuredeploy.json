@@ -1,62 +1,47 @@
 {
-  "properties": {
-    "mode": "Incremental",
-    "parameters": {
-      "siteName": {
-        "value": "your sitename"
-      },
-      "location": {
-        "value": "your location"
-      },
-      "packageUri": {
-        "value": "your zip content url"
-      }
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "siteName": {
+      "type": "string"
     },
-    "template": {
-      "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-      "contentVersion": "1.0.0.0",
-      "parameters": {
-        "siteName": {
-          "type": "string"
-        },
-        "location": {
-          "type": "string"
-        },
-        "packageUri": {
-          "type": "string"
+    "location": {
+      "type": "string"
+    },
+    "packageUri": {
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "name": "[parameters('siteName')]",
+      "type": "Microsoft.Web/sites",
+      "apiVersion": "2016-03-01",
+      "location": "[parameters('location')]",
+      "properties": {
+        "mode": "Incremental",
+        "siteConfig": {
+          "appSettings": [
+            {
+              "name": "WEBSITE_RUN_FROM_PACKAGE",
+              "value": "1"
+            }
+          ]
         }
       },
       "resources": [
         {
-          "name": "[parameters('siteName')]",
-          "type": "Microsoft.Web/sites",
+          "name": "ZipDeploy",
+          "type": "Extensions",
           "apiVersion": "2016-03-01",
-          "location": "[parameters('location')]",
+          "dependsOn": [
+            "[concat('Microsoft.Web/sites/', parameters('siteName'))]"
+          ],
           "properties": {
-            "siteConfig": {
-              "appSettings": [
-                {
-                  "name": "WEBSITE_RUN_FROM_PACKAGE",
-                  "value": "1"
-                }
-              ]
-            }
-          },
-          "resources": [
-            {
-              "name": "ZipDeploy",
-              "type": "Extensions",
-              "apiVersion": "2016-03-01",
-              "dependsOn": [
-                "[concat('Microsoft.Web/sites/', parameters('siteName'))]"
-              ],
-              "properties": {
-                "packageUri": "[parameters('packageUri')]"
-              }
-            }
-          ]
+            "packageUri": "[parameters('packageUri')]"
+          }
         }
       ]
     }
-  }
+  ]
 }
