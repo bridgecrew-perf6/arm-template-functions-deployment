@@ -3,8 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "appNamePrefix": {
-      "type": "string",
-      "default": "functionapp-"
+      "type": "string"
     },
     "packageUri": {
       "type": "string",
