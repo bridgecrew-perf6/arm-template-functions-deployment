@@ -22,17 +22,6 @@
       "type": "Microsoft.Web/sites",
       "apiVersion": "2016-03-01",
       "location": "[parameters('location')]",
-      "properties": {
-        "mode": "Incremental",
-        "siteConfig": {
-          "appSettings": [
-            {
-              "name": "WEBSITE_RUN_FROM_PACKAGE",
-              "value": "1"
-            }
-          ]
-        }
-      },
       "resources": [
         {
           "name": "ZipDeploy",
