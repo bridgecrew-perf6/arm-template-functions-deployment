@@ -18,24 +18,13 @@
   },
   "resources": [
     {
-      "name": "[parameters('siteName')]",
-      "type": "Microsoft.Web/sites",
-      "apiVersion": "2016-03-01",
+      "name": "[concat(parameters('siteName'), '/ZipDeploy')]",
+      "type": "Microsoft.Web/sites/extensions",
+      "apiVersion": "2018-02-01",
       "location": "[parameters('location')]",
-      "properties": {},
-      "resources": [
-        {
-          "name": "ZipDeploy",
-          "type": "Extensions",
-          "apiVersion": "2016-03-01",
-          "dependsOn": [
-            "[concat('Microsoft.Web/sites/', parameters('siteName'))]"
-          ],
-          "properties": {
-            "packageUri": "[parameters('packageUri')]"
-          }
-        }
-      ]
+      "properties": {
+        "packageUri": "[parameters('packageUri')]"
+      }
     }
   ]
 }
