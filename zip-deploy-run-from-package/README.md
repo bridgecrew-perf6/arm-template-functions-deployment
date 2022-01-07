@@ -1,7 +1,5 @@
 # Function App Deployment with ZipDeploy Run From Package
 
-[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fpatelchandni%2Farm-template-functions-deployment%2Fmaster%2Fzip-deploy-run-from-package%2Fazuredeploy.json)
-
 ### ZipDeploy with ARM template
 
 ZipDeploy is intended for xcopy or ftp style deployment. By default, It unzips the artifacts and lay them out exactly to d:\home\site\wwwroot. You can use any tooling (such as one coming with Windows) to zip your content.
@@ -42,6 +40,8 @@ The following example shows declartion of ZipDeploy extension in site resources 
 }
 ```
 
+If you have an existing Function App with appSettings `WEBSITE_RUN_FROM_PACKAGE=1` and want to perform deployment with ZipDeploy extension, then here is the template:
+
+[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fpatelchandni%2Farm-template-functions-deployment%2Fmaster%2Fzip-deploy-run-from-package%2Fazuredeploy.json)
+
 Since it will mount as read-only, app runtime will not be able to create or modify files under d:\home\site\wwwroot. In addition, Azure Functions Portal will also prevent you from modifying the Function Apps.
-
-
