@@ -7,7 +7,9 @@
     },
     "packageUri": {
       "type": "string",
-      "value": "your zip content url"
+      "metadata": {
+        "description": "The zip content url."
+      }
     }
   },
   "variables": {
