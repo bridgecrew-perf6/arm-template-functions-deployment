@@ -4,7 +4,8 @@ This repo contains currently available Azure Resource Manager templates for depl
 
 1. Create <a href="/function-app-basic-resources">Function App with Basic Resources</a> including ZipDeploy extension to mount zip package for deployment
 2. Create <a href="/function-app-storage-private-endpoints">Function App with Azure Storage private endpoints</a>
-3. Deploy <a href="/zip-deploy-run-from-package">Function App with ZipDeploy using Run From Package</a>
+3. Create <a href="/function-app-vnet-integration">Function App with Virtual Network Integration</a>
+4. Deploy <a href="/zip-deploy-run-from-package">Function App with ZipDeploy using Run From Package</a>
 
 This repo also contains documentation on the following:
 
