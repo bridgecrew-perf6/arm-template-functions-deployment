@@ -6,17 +6,17 @@ This sample Azure Resource Manager template deploys an Azure Function App that c
 
 ![Function App with Storage Private Endpoints](/function-app-storage-private-endpoints/images/function-app-storage-private-endpoints.jpg) 
 
-### Azure Function App
-
-The Function App uses the [AzureWebJobsStorage](https://docs.microsoft.com/azure/azure-functions/functions-app-settings#azurewebjobsstorage) and [WEBSITE_CONTENTAZUREFILECONNECTIONSTRING](https://docs.microsoft.com/azure/azure-functions/functions-app-settings#website_contentazurefileconnectionstring) app settings to connect to a private endpoint-secured Storage Account.
-
-+ **Microsoft.Web/sites**: The function app instance.
-
 ### Elastic Premium Plan
 
 The Azure Function app provisioned in this sample uses an [Azure Functions Elastic Premium plan](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#features). 
 
 + **Microsoft.Web/serverfarms**: The Azure Functions Premium plan (a.k.a. Elastic Premium plan)
+
+### Azure Function App
+
+The Function App uses the [AzureWebJobsStorage](https://docs.microsoft.com/azure/azure-functions/functions-app-settings#azurewebjobsstorage) and [WEBSITE_CONTENTAZUREFILECONNECTIONSTRING](https://docs.microsoft.com/azure/azure-functions/functions-app-settings#website_contentazurefileconnectionstring) app settings to connect to a private endpoint-secured Storage Account.
+
++ **Microsoft.Web/sites**: The function app instance.
 
 ### Azure Storage account
 
