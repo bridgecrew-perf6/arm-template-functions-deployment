@@ -22,6 +22,7 @@ The Azure Function app provisioned in this sample uses an [Azure Functions Elast
 
 The Storage account that the Function uses for operation and for file contents. 
 
++ **Microsoft.Storage/storageAccounts**: [Azure Functions requires a storage account](https://docs.microsoft.com/azure/azure-functions/storage-considerations) for the function app instance.
 
 ### Virtual Network
 
