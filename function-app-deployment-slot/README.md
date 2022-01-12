@@ -1,6 +1,6 @@
 # Azure Function App with Deployment Slot
 
-[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fpatelchandni%2Farm-template-functions-deployment%2Fmain%2Ffunction-app-basic-resources%2Fazuredeploy.json)  [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fpatelchandni%2Farm-template-functions-deployment%2Fmain%2Ffunction-app-basic-resources%2Fazuredeploy.json)
+[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fpatelchandni%2Farm-template-functions-deployment%2Fmain%2Ffunction-app-deployment-slot%2Fazuredeploy.json)  [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fpatelchandni%2Farm-template-functions-deployment%2Fmain%2Ffunction-app-deployment-slot%2Fazuredeploy.json)
 
 This sample Azure Resource Manager template deploys an Azure Function App with production slot and an aditional <a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-deployment-slots">deployment slot</a>.
 
@@ -15,6 +15,16 @@ The Azure Function app provisioned in this sample uses an [Azure Functions Consu
 The Function App uses the [AzureWebJobsStorage](https://docs.microsoft.com/azure/azure-functions/functions-app-settings#azurewebjobsstorage) and [WEBSITE_CONTENTAZUREFILECONNECTIONSTRING](https://docs.microsoft.com/azure/azure-functions/functions-app-settings#website_contentazurefileconnectionstring) app settings to connect to a Storage Account.
 
 + **Microsoft.Web/sites**: The function app instance.
+
+### Deployment Slot
+
+Azure Functions <a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-deployment-slots">deployment slots</a> allow your function app to run different instances called "slots". Slots are different environments exposed via a publicly available endpoint. One app instance is always mapped to the production slot, and you can swap instances assigned to a slot on demand. 
+
+Function apps running under the Apps Service plan may have multiple slots, while under the Consumption plan only one slot is allowed.
+
+Don't set the WEBSITE_CONTENTSHARE setting in a deployment slot. This setting is generated for you when the app is created in the deployment slot.
+
++ **Microsoft.Web/sites/slots**: The deployment slot
 
 ### Azure Storage account
 
