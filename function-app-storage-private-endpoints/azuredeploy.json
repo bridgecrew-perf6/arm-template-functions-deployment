@@ -493,6 +493,10 @@
             {
               "name": "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING",
               "value": "[format('DefaultEndpointsProtocol=https;AccountName={0};AccountKey={1}', parameters('functionStorageAccountName'), listKeys(resourceId('Microsoft.Storage/storageAccounts', parameters('functionStorageAccountName')), '2021-02-01').keys[0].value)]"
+            },            
+            {
+              "name": "WEBSITE_CONTENTSHARE",
+              "value": "[variables('functionContentShareName')]"
             },
             {
               "name": "FUNCTIONS_EXTENSION_VERSION",
@@ -509,10 +513,6 @@
             {
               "name": "WEBSITE_CONTENTOVERVNET",
               "value": "1"
-            },
-            {
-              "name": "WEBSITE_CONTENTSHARE",
-              "value": "[variables('functionContentShareName')]"
             }
           ]
         }
