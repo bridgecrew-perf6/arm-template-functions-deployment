@@ -6,6 +6,12 @@ This sample Azure Resource Manager template deploys an Azure Function App that c
 
 ![Function App with Basic Resources](/function-app-basic-resources/images/function-app-basic-resources.jpg) 
 
+### Comsumption Plan
+
+The Azure Function app provisioned in this sample uses an [Azure Functions Consumption plan](https://docs.microsoft.com/en-us/azure/azure-functions/consumption-plan). 
+
++ **Microsoft.Web/serverfarms**: The Azure Functions Consumption plan (a.k.a. Dynamic plan)
+
 ### Azure Function App
 
 The Function App uses the [AzureWebJobsStorage](https://docs.microsoft.com/azure/azure-functions/functions-app-settings#azurewebjobsstorage) and [WEBSITE_CONTENTAZUREFILECONNECTIONSTRING](https://docs.microsoft.com/azure/azure-functions/functions-app-settings#website_contentazurefileconnectionstring) app settings to connect to a Storage Account.
@@ -17,12 +23,6 @@ The Function App uses the [AzureWebJobsStorage](https://docs.microsoft.com/azure
 The Zip Deploy extension is added along with app setting `WEBSITE_RUN_FROM_PACKAGE=1` to mount the zip package for deployment. 
 
 + **Microsoft.Web/sites/extensions**: The ZipDeploy extension.
-
-### Comsumption Plan
-
-The Azure Function app provisioned in this sample uses an [Azure Functions Consumption plan](https://docs.microsoft.com/en-us/azure/azure-functions/consumption-plan). 
-
-+ **Microsoft.Web/serverfarms**: The Azure Functions Consumption plan (a.k.a. Dynamic plan)
 
 ### Azure Storage account
 
