@@ -24,7 +24,7 @@ Function apps running under the Apps Service plan may have multiple slots, while
 
 Don't set the WEBSITE_CONTENTSHARE setting in a deployment slot. This setting is generated for you when the app is created in the deployment slot.
 
-+ **Microsoft.Web/sites/slots**: The deployment slot
++ **Microsoft.Web/sites/slots**: The deployment slot for the function app.
 
 ### Azure Storage account
 
