@@ -16,7 +16,7 @@ The following example shows declartion of ZipDeploy extension in site resources 
 {
   "name": "[parameters('siteName')]",
   "type": "Microsoft.Web/sites",
-  "apiVersion": "2019-08-01",
+  "apiVersion": "2021-02-01",
   "location": "[parameters('location')]",
   "properties": {
     "siteConfig": {
@@ -32,7 +32,7 @@ The following example shows declartion of ZipDeploy extension in site resources 
     {
       "name": "ZipDeploy",
       "type": "Extensions",
-      "apiVersion": "2019-08-01",
+      "apiVersion": "2021-02-01",
       "dependsOn": [
         "[concat('Microsoft.Web/sites/', parameters('siteName'))]"
       ],
