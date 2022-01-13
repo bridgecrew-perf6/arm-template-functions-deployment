@@ -46,7 +46,8 @@
         "family": "Y"
       },
       "properties": {
-        "name": "[variables('functionAppName')]"
+        "name": "[variables('functionAppName')]",
+        "computeMode": "Dynamic"
       }
     },
     {
