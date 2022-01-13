@@ -3,7 +3,7 @@
 This repo contains currently available Azure Resource Manager templates for deploying Function App with recommended settings and best practices. Templates for the following specific scenarios are available:
 
 1. Create <a href="/function-app-basic-resources">Function App with Basic Resources</a> including ZipDeploy extension to mount zip package for deployment
-2. Create <a href="/function-app-storage-private-endpoints">Function App with a Deployment Slot</a>
+2. Create <a href="/function-app-deployment-slot">Function App with a Deployment Slot</a>
 3. Create <a href="/function-app-storage-private-endpoints">Function App with Azure Storage private endpoints</a>
 4. Create <a href="/function-app-vnet-integration">Function App with Virtual Network Integration</a>
 5. Deploy <a href="/zip-deploy-run-from-package">Function App with ZipDeploy using Run From Package</a>
