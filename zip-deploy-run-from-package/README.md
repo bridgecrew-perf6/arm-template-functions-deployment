@@ -4,7 +4,7 @@
 
 ZipDeploy is intended for xcopy or ftp style deployment. By default, It unzips the artifacts and lay them out exactly to d:\home\site\wwwroot. You can use any tooling (such as one coming with Windows) to zip your content.
 
-It is recommended to set appSettings `WEBSITE_RUN_FROM_PACKAGE=1`, to allow Zip package deployed with ZipDeploy to mount as read-only virtual filesystem directly without deflating or extracting. The advantage is to allow atomic and reliable deployment (no more files being locked). 
+It is recommended to set appSettings `WEBSITE_RUN_FROM_PACKAGE=1`, to allow Zip package deployed with ZipDeploy to mount as read-only virtual filesystem directly without deflating or extracting. The advantage is to allow atomic and reliable deployment (no more files being locked). The appSetting `WEBSITE_RUN_FROM_PACKAGE=1` is not supported with Linux Consumption plan.
 
 If you have an existing Function App with appSettings `WEBSITE_RUN_FROM_PACKAGE=1` and want to perform deployment with ZipDeploy extension, then here is the template:
 
