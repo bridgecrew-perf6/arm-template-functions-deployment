@@ -113,7 +113,7 @@
   "resources": [
     {
       "type": "Microsoft.Network/virtualNetworks",
-      "apiVersion": "2020-07-01",
+      "apiVersion": "2021-02-01",
       "name": "[parameters('vnetName')]",
       "location": "[parameters('location')]",
       "properties": {
@@ -454,7 +454,7 @@
     },
     {
       "type": "Microsoft.Web/serverfarms",
-      "apiVersion": "2021-01-01",
+      "apiVersion": "2021-02-01",
       "name": "[parameters('functionAppPlanName')]",
       "location": "[parameters('location')]",
       "sku": {
@@ -471,7 +471,7 @@
     },
     {
       "type": "Microsoft.Web/sites",
-      "apiVersion": "2021-01-01",
+      "apiVersion": "2021-02-01",
       "name": "[parameters('functionAppName')]",
       "location": "[parameters('location')]",
       "kind": "[if(variables('isReserved'), 'functionapp,linux', 'functionapp')]",
@@ -533,7 +533,7 @@
     },
     {
       "type": "Microsoft.Web/sites/networkConfig",
-      "apiVersion": "2021-01-01",
+      "apiVersion": "2021-02-01",
       "name": "[format('{0}/{1}', parameters('functionAppName'), 'virtualNetwork')]",
       "properties": {
         "subnetResourceId": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('vnetName'), parameters('functionSubnetName'))]",
