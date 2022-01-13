@@ -20,7 +20,7 @@ The Function App uses the [AzureWebJobsStorage](https://docs.microsoft.com/azure
 
 ### ZipDeploy Extension
 
-The Zip Deploy extension is added along with recommended app setting `WEBSITE_RUN_FROM_PACKAGE=1` to mount the zip package for deployment. The appSetting `WEBSITE_RUN_FROM_PACKAGE=1` is not supported with Linux Consumption plan.
+The Zip Deploy extension is added along with recommended app setting `WEBSITE_RUN_FROM_PACKAGE=1` to mount the zip package for deployment. The app setting `WEBSITE_RUN_FROM_PACKAGE=1` is not supported with Linux Consumption plan.
 
 + **Microsoft.Web/sites/extensions**: The ZipDeploy extension.
 
