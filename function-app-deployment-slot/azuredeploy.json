@@ -57,7 +57,7 @@
   "resources": [
     {
       "type": "Microsoft.Storage/storageAccounts",
-      "apiVersion": "2019-06-01",
+      "apiVersion": "2021-02-01",
       "name": "[variables('storageAccountName')]",
       "location": "[parameters('location')]",
       "sku": {
@@ -67,7 +67,7 @@
     },
     {
       "type": "Microsoft.Web/serverfarms",
-      "apiVersion": "2020-06-01",
+      "apiVersion": "2021-02-01",
       "name": "[variables('hostingPlanName')]",
       "location": "[parameters('location')]",
       "sku": {
@@ -81,26 +81,27 @@
     },
     {
       "type": "microsoft.insights/components",
-      "apiVersion": "2020-02-02-preview",
+      "apiVersion": "2020-02-02",
       "name": "[variables('applicationInsightsName')]",
       "location": "[parameters('appInsightsLocation')]",
       "tags": {
         "[concat('hidden-link:', resourceId('Microsoft.Web/sites', variables('applicationInsightsName')))]": "Resource"
       },
       "properties": {
-        "ApplicationId": "[variables('applicationInsightsName')]",
-        "Request_Source": "IbizaWebAppExtensionCreate"
+        "Application_Type": "web",
+        "ApplicationId": "[variables('applicationInsightsName')]"
       }
     },
     {
       "type": "Microsoft.Web/sites",
-      "apiVersion": "2020-06-01",
+      "apiVersion": "2021-02-01",
       "name": "[variables('functionAppName')]",
       "location": "[parameters('location')]",
       "kind": "functionapp",
       "dependsOn": [
         "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
-        "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
+        "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]",
+        "[resourceId('Microsoft.Insights/components', variables('applicationInsightsName'))]"
       ],
       "properties": {
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
@@ -140,7 +141,7 @@
     },
     {
       "type":"Microsoft.Web/sites/slots",
-      "apiVersion": "2020-06-01",
+      "apiVersion": "2021-02-01",
       "name": "[concat(variables('functionAppName'), '/deployment')]",
       "kind":"functionapp",
       "location": "[parameters('location')]",
