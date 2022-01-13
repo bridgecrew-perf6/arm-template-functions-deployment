@@ -44,6 +44,9 @@
         "tier": "Dynamic",
         "size": "Y1",
         "family": "Y"
+      },
+      "properties": {
+        "name": "[variables('functionAppName')]"
       }
     },
     {
