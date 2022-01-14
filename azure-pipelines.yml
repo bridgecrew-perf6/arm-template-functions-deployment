@@ -22,7 +22,6 @@ steps:
     templateLocation: 'Linked artifact'
     csmFile: 'zip-deploy-run-from-package/azuredeploy.json'
     csmParametersFile: 'zip-deploy-run-from-package/azuredeploy.parameters.json'
-    deploymentMode: 'Validation'
 
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
