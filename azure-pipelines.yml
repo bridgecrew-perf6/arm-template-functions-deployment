@@ -23,3 +23,16 @@ steps:
     csmFile: 'zip-deploy-run-from-package/azuredeploy.json'
     csmParametersFile: 'zip-deploy-run-from-package/azuredeploy.parameters.json'
     deploymentMode: 'Validation'
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Private Test Sub CHANDNIPATEL (e160ca65-836f-4be6-8ef5-e6234b90de87)'
+    subscriptionId: 'e160ca65-836f-4be6-8ef5-e6234b90de87'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'function-app-basic-resources'
+    location: 'East US'
+    templateLocation: 'Linked artifact'
+    csmFile: 'function-app-basic-resources/azuredeploy.json'
+    csmParametersFile: 'function-app-basic-resources/azuredeploy.parameters.json'
+    deploymentMode: 'Validation'
