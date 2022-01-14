@@ -21,4 +21,5 @@ steps:
     location: 'East US'
     templateLocation: 'Linked artifact'
     csmFile: 'zip-deploy-run-from-package/azuredeploy.json'
+    csmParametersFile: 'zip-deploy-run-from-package/azuredeploy.parameters.json'
     deploymentMode: 'Validation'
