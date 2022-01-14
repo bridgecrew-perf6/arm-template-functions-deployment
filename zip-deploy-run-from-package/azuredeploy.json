@@ -26,7 +26,7 @@
     {
       "name": "[concat(parameters('functionAppName'), '/ZipDeploy')]",
       "type": "Microsoft.Web/sites/extensions",
-      "apiVersion": "2021-02-01",
+      "apiVersion": "2018-02-01",
       "location": "[parameters('location')]",
       "properties": {
         "packageUri": "[parameters('packageUri')]"
