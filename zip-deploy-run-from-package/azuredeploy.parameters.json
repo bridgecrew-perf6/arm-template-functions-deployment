@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "functionAppName": {
+      "value": "function-app-basic-resources-p263"
+    },
+    "location": {
+      "value": "eastus"
+    },
+    "packageUri": {
+      "value": "https://cpwindotnetpremiumsa.blob.core.windows.net/public/bin.zip?sp=r&st=2022-01-14T19:24:56Z&se=2022-01-15T03:24:56Z&spr=https&sv=2020-08-04&sr=b&sig=Xml2RMdIjJq3ZxLuqJiaIAcNfWo2aA5baWQtgIcCcgc%3D"
+    }
+  }
+}
