@@ -114,7 +114,10 @@
         {
           "apiVersion": "2021-02-01",
           "type": "extensions",
-          "name": "zipdeploy",          
+          "name": "zipdeploy",    
+          "dependsOn": [
+            "[resourceId('Microsoft.Web/sites', variables('functionAppName'))]"
+          ],
           "properties": {
             "packageUri": "[parameters('packageUri')]"
           }
